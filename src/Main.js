@@ -18,7 +18,7 @@ class Main extends React.Component {
           horns={horn.horns}
           />
           </Col>
-          )
+          );
       });
 
     return (
