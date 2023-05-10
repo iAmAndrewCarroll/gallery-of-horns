@@ -1,3 +1,19 @@
+Number and name of feature: Lots
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 1445hrs
+
+Finish time: 2100hrs
+
+Actual time needed to complete: +6hrs
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
