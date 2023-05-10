@@ -7,18 +7,25 @@ class Main extends React.Component {
 
     let hornedOne = [];
       HornedOneData.forEach((horn, idx) => {
-        hornedOne.push(<HornedBeast
+        hornedOne.push(
+          <Col md={4} key={idx}>
+        
+        <HornedBeast
           imageURL={horn.image_url}
           title={horn.title}
           description={horn.description}
           key={horn.keyword}
           horns={horn.horns}
-          />);
+          />
+          </Col>
+          )
       });
 
     return (
       <main>
+        <Row>
         {hornedOne}
+        </Row>
       </main>
     );
   }
