@@ -2,3 +2,12 @@ body {
   background-color: blanchedalmond;
 }
 
+.header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 8vw;
+  font-family: cursive;
+  color: darkred;
+}
