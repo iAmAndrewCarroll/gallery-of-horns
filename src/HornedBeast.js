@@ -25,7 +25,7 @@ class HornedBeast extends React.Component {
         <div className="card-body">
           <h5 className="card-title">{this.props.title}</h5>
           <p className="card-text">{this.props.description}</p>
-          <p><span>🖤 Favorite 🖤: {this.state.clicks}</span></p>
+          <p><span role="img" aria-label="blackHeart">🖤</span> Favorite <span role="img" aria-label="blackHeart">🖤</span>: {this.state.clicks}</p>
           <button className="btn btn-primary" onClick={this.handleClicks}>Pierce the Veil</button>
         </div>
       </Card>
