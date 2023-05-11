@@ -8,7 +8,17 @@ Finish time: 2100hrs
 
 Actual time needed to complete: +6hrs
 
+Lab 03
 
+Number and name of feature: Lab 03 Modal
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1600hrs
+
+Finish time: 2100hrs
+
+Actual time needed to complete: 5 hours
 
 
 
