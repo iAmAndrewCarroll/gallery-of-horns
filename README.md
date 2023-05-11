@@ -20,6 +20,18 @@ Finish time: 2100hrs
 
 Actual time needed to complete: 5 hours
 
+Lab 04
+
+Number and name of feature: Lab 04 Filters
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 1600hrs
+
+Finish time: 2100hrs
+
+Actual time needed to complete: 5 hours
+
 
 # The Real Deal to Know:
 
