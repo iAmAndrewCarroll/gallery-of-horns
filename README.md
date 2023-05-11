@@ -21,7 +21,35 @@ Finish time: 2100hrs
 Actual time needed to complete: 5 hours
 
 
+# The Real Deal to Know:
 
+1. App.js feeds [Header.js, Main.js, ClickedBeast.js, and Footer.js]
+   * App.js passes props (properties) to those child components
+2. Main.js feeds [HornedBeast.js]
+
+### App.js
+
+* State: 
+  * isModalDisplaying Boolean for if the modal is displaying
+  * beastInfo: the data about the beast that was clicked on must be passed to our modal in [SelectedBeast.js]
+* Methods:
+  * handleModalOpen event handler to change the value of isModalDisplaying (make true)
+    * And put the Beast data in state
+  * handleModalClose event handeler to change the value of isModalDisplaying (make false)
+
+### HornedBeast.js
+
+* State: click event happens here
+  * When clicked invoke the handleModalOpen method (remember it is lighting the fuse that burns back through Main.js to App.js handleModalOpen to true)
+  * this.props.handleModalOpen()
+  * When we invoke handleModalOpen() we need to send the beast information as an argument: this.props.handleModalOpen(beastInfo) back up to App.js to the handleModalOpen event handler
+    * beastInfo: the data about the beast that was clicked on
+
+### ClickedBeast.js
+
+* The Modal is in this file
+  * isModalDisplaying set to true?
+  * handleModalClose is passed from App.js through props to ClickedBeast.js in order to close the modal.
 
 
 # Getting Started with Create React App

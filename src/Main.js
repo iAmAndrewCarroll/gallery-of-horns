@@ -1,16 +1,31 @@
 import React from "react";
 import HornedBeast from './HornedBeast';
-// import HornedOneData from './data.json';
+import data from './data.json';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
 
 class Main extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      allBeast: data,
+      filteredBeast: data,
+    }
+  }
+
+  filter = (event) => {
+    let numHorns = parseInt(event.target.value);
+    let everyBeast = this.state.allBeast;
+    if (numHorns) {
+      everyBeast = this.state.allBeast.filter(beast => beast.horns === numHorns);
+    }
+    this.setState({filteredBeast: everyBeast})
+  }
+
   render() {
 
-    let hornedOne = this.props.data.map((horn, idx) => {
-        //     HornedOneData.forEach((horn, idx) => {
-        // hornedOne.push(
-        //   <Col md={4} key={idx}>
+    let hornedOne = this.state.filteredBeast.map((horn, idx) => {
 
       return (<Col key={idx} className="mt-4">
         
@@ -30,6 +45,18 @@ class Main extends React.Component {
 
     return (
       <main>
+        <Form>
+          <Form.Group>
+            <Form.Label>Horned Picker</Form.Label>
+              <Form.Control as="select" onChange={this.filter}>
+                <option value="">All</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="100">100</option>
+              </Form.Control>
+          </Form.Group>
+        </Form>
         <Row xs={1} sm={2} md={3} lg={4}>
         {hornedOne}
         </Row>

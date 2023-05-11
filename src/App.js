@@ -23,6 +23,9 @@ class App extends React.Component {
     });
   }
   handleShowModal = (clickedBeast) => {
+    // SetState will only work inside the component that it is in
+    // if in App.js we call setState, that will change the state of App only
+    // this.setState is the way we change values in state
     this.setState({
       isModalDisplaying: true,
       clickedBeast: clickedBeast
@@ -44,15 +47,16 @@ class App extends React.Component {
           hearts={this.state.hearts}
         />
         <Main
+        // addHearts, data and handleShowModal can ONLY be accessed inside Main using this.props (ex: this.props.handleShowModal)
           addHearts={this.addHearts}
           data={data}
           handleShowModal={this.handleShowModal}
         />
         <Footer />
         <ClickedBeast
-        show={this.state.isModalDisplaying}
-        onHide={this.handleCloseModal}
-        clickedBeast={this.state.clickedBeast}
+          show={this.state.isModalDisplaying}
+          onHide={this.handleCloseModal}
+          clickedBeast={this.state.clickedBeast}
         />
       </>
     )
